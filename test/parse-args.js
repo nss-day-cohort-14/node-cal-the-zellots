@@ -2,7 +2,7 @@
 
 const { assert: { isFunction, strictEqual } } = require('chai');
 const { exec } = require('child_process');
-const { argCount } = require('../lib/parse-args')
+const { argCount, returnCurrentMonth } = require('../lib/parse-args')
 
 
 describe('argCount', () => {
@@ -20,5 +20,11 @@ describe('argCount', () => {
     it('2 command line arguments should return "2"', () => {
         const args = [1, 23];
         strictEqual(argCount(args), 2)
-    })
+    });
+});
+
+describe('returnCurrentMonth', () => {
+    it('should be a function', () => {
+        isFunction(returnCurrentMonth)
+    });
 })

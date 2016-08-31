@@ -6,7 +6,8 @@ const { argCount } = require('../lib/parse-args');
 
 describe('cli', () => {
     it.skip('should handle 0 arguments', (done) => {
-        exec('bin/node-cal', (err, stdout) => {
+        exec('cal', (err, stdout) => {
+            console.log(stdout)
             strictEqual(stdout, 0)
             done()
         })
