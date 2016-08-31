@@ -41,6 +41,6 @@ describe('zellerCon', () => {
         oneOf(zellerCon(2016, 1, 1), expected)
     });
     it('(2016, 1, 1) should return 5', () => {
-        strictEqual(zellerCon(2016, 1, 1), 5)
+        strictEqual(zellerCon(2016, 1, 1), 6)
     })
 });
