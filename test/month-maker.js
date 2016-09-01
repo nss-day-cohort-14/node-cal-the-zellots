@@ -2,15 +2,15 @@
 
 const { assert: { isFunction, strictEqual } } = require('chai');
 const { exec } = require('child_process');
-const { monthMaker, dayString, zeroSpacer, leapYear, firstOfTheMonth } = require('../lib/month-maker');
+const { monthHeader, dayString, zeroSpacer, leapYear, firstOfTheMonth } = require('../lib/month-maker');
 
 
-describe('monthMaker', () => {
+describe('monthHeader', () => {
     it('should be a function', () => {
-        isFunction(monthMaker)
+        isFunction(monthHeader)
     });
     it('8 2016 should return "August 2016', () => {
-        strictEqual(monthMaker(2016, 8), "    August 2016\n")
+        strictEqual(monthHeader(2016, 8), "    August 2016\n")
     })
 })
 
