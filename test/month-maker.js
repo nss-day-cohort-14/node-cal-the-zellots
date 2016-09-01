@@ -2,7 +2,7 @@
 
 const { assert: { isFunction, strictEqual } } = require('chai');
 const { exec } = require('child_process');
-const { monthHeader, dayString, zeroSpacer, leapYear, firstOfTheMonth } = require('../lib/month-maker');
+const { monthHeader, dayString, zeroSpacer, leapYear, firstOfTheMonth, chopLastSpace } = require('../lib/month-maker');
 
 
 describe('monthHeader', () => {
@@ -58,4 +58,15 @@ describe('firstOfTheMonth', () => {
     it.skip('should return false if year is a leap year', () => {
         strictEqual(leapYear(2015), false)
     })
-})
+});
+
+describe('chopLastSpace', () => {
+    it('should be a function', () => {
+        isFunction(chopLastSpace)
+    });
+    it('should remove the the blank spaces before a line break in a string', () => {
+        const expected = "a\n b\n";
+        const original = "a \n b \n";
+        strictEqual(chopLastSpace(original), expected)
+    })
+}) 
