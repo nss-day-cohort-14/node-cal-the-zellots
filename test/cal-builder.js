@@ -12,7 +12,7 @@ describe('monthBuilder', () => {
     });
     it('should work for june 2016', (done) => {
         // let expected = "          1  2  3  4 \n 5  6  7  8  9 10 11 \n12 13 14 15 16 17 18 \n19 20 21 22 23 24 25 \n26 27 28 29 30 \n\n";
-        exec('cal 6 2016', (err, stdout1) => {
+        exec('cal 2016', (err, stdout1) => {
             strictEqual(monthBuilder(2016, 6), stdout1.toString())
             done()
         })
