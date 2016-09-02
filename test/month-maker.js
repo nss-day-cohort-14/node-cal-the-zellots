@@ -4,7 +4,6 @@ const { assert: { isFunction, strictEqual } } = require('chai');
 const { exec } = require('child_process');
 const { monthHeader, dayString, zeroSpacer, leapYear, firstOfTheMonth, chopLastSpace } = require('../lib/month-maker');
 
-
 describe('monthHeader', () => {
     it('should be a function', () => {
         isFunction(monthHeader)
